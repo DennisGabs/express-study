@@ -7,7 +7,11 @@ app.get('/', (_, res) => {
 })
 
 app.get('/about', (_, res) => {
-    res.send('Rota About')
+    res.send('<h1>Rota About</h1>')
+})
+
+app.get('/about/:id', (req, res) => {
+    res.send(req.params.id)
 })
 
 app.listen(port, function() {
